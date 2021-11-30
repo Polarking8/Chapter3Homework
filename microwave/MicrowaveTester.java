@@ -11,8 +11,8 @@ public class MicrowaveTester {
         microwave.reset();
         microwave.addThirtySeconds();
         microwave.addThirtySeconds();
-        System.out.println("The microwave will now run for "
-                + microwave.getRunningTime()+ " seconds at power level" + microwave.getPowerLevel());
+        microwave.startMicrowave();
         }
+
 
 }

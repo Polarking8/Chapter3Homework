@@ -1,30 +1,42 @@
 package org.hillcrest.chapter3.microwave;
 
 public class Microwave {
-        private double runningTime; // running time of the microwave
-        private int powerLevel = 1; // power level of the microwave
-        public Microwave(){
-        }
-        public void reset(){
+    private double runningTime; // running time of the microwave
+    private int powerLevel; // power level of the microwave
+
+    public Microwave(){
+        powerLevel = 1;
+    }
+
+    /**
+     * resets the running time back to zero
+     */
+    public void reset(){
             runningTime = 0;
         }
-        public void addThirtySeconds(){
+
+    /**
+     * adds thirty seconds to the running time
+     */
+    public void addThirtySeconds(){
             runningTime += 30;
         }
-        // power level becomes one from two, and two from one. Any other number defaults to one.
-        public void changePowerLevel(){
-            if (powerLevel == 1){
-                powerLevel = 2;
-            }
-            else if (powerLevel == 2){
-                powerLevel = 1;
-            }
-            else powerLevel = 1;
+
+    /**
+     * Changes the power level from two to one and one to two
+     */
+    public void changePowerLevel(){
+        if (powerLevel == 1){
+            powerLevel = 2;
         }
-        public double getRunningTime(){
-            return runningTime;
-        }
-        public double getPowerLevel(){
-            return powerLevel;
-        }
+        else powerLevel = 1;
+    }
+
+    /**
+     * prints the microwave start sequence, with the running time and power level
+     */
+    public void startMicrowave(){
+        System.out.println("The microwave will now run for " + runningTime + " seconds at power level " + powerLevel);
+    }
+
 }

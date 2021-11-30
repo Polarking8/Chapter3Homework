@@ -1,9 +1,9 @@
 package org.hillcrest.chapter3.student;
 public class Student {
-    private int totalScore;
-    private int averageScore;
-    private int numberOfQuizzes = 0;
-    private int quizScore;
+    private double totalScore;
+    private double averageScore;
+    private double numberOfQuizzes = 0;
+    private double quizScore;
     private String StudentName;
     /**
      * Creates an instance of a student
